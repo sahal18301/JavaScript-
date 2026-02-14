@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module Calculator Display</title>
+
+<style>
+body {
+    font-family: Arial;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    width: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+<h2>Module Calculator Results</h2>
+<div id="result"></div>
+</div>
+
+<script type="module">
+
+import { multiply, divide, subtract } from "./mathoperations.js";
+
+var resultDiv = document.getElementById("result");
+
+// Example numbers
+var a = 10;
+var b = 5;
+// Display results using innerHTML
+resultDiv.innerHTML = 
+    "<p>Multiply (" + a + " * " + b + "): " + multiply(a, b) + "</p>" +
+    "<p>Divide (" + a + " / " + b + "): " + divide(a, b) + "</p>" +
+    "<p>Subtract (" + a + " - " + b + "): " + subtract(a, b) + "</p>";
+
+</script>
+
+</body>
+</html>

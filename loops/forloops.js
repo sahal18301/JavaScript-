@@ -9,9 +9,7 @@ let nameOfstudent =["ali", "ahmed", "osman", "sabir", "mufti" ]
 for (let index = 0; index <= 5; index++) {
     if (index == 2) {
         // 
-    continue}
+        continue
+    }
     console.log(nameOfstudent);
-    
-    
-    
 }
